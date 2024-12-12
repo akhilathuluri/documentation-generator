@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 bg-gradient-to-br from-gray-50 to-blue-50;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-400 transition-colors;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .glass-effect {
+    @apply bg-white bg-opacity-80 backdrop-blur-sm;
+  }
+}
+
+/* Markdown styles */
+.wmde-markdown {
+  background-color: transparent !important;
+}
+
+.wmde-markdown pre {
+  @apply bg-gray-50 !important;
+}
+
+.wmde-markdown code {
+  @apply text-sm !important;
+}
+
+.prose {
+  max-width: none !important;
+}
+
+.prose pre {
+  @apply bg-gray-50 !important;
+  @apply border border-gray-200 !important;
+}
+
+/* Animation classes */
+.animate-slideIn {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out;
+}
